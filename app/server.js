@@ -13,7 +13,7 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-mongoose.connect('mongodb+srv://maharshi:bytes123@cluster0.zzjlxtl.mongodb.net/test')
+mongoose.connect(process.env.DB_URL)
 .then(() => console.log('MongoDB connected'))
 .catch((err) => console.error(err));
 
